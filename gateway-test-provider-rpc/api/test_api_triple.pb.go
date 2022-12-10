@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-triple v1.0.8
 // - protoc             v3.21.9
-// source: samples_api.proto
+// source: test_api.proto
 
 package api
 
@@ -50,7 +50,7 @@ func (c *GreeterClientImpl) GetDubboStub(cc *triple.TripleConn) GreeterClient {
 }
 
 func (c *GreeterClientImpl) XXX_InterfaceName() string {
-	return "api.Greeter"
+	return "top.kwseeker.gateway.test.api.Greeter"
 }
 
 func NewGreeterClient(cc *triple.TripleConn) GreeterClient {
@@ -129,7 +129,7 @@ func (s *UnimplementedGreeterServer) XXX_ServiceDesc() *grpc_go.ServiceDesc {
 	return &Greeter_ServiceDesc
 }
 func (s *UnimplementedGreeterServer) XXX_InterfaceName() string {
-	return "api.Greeter"
+	return "top.kwseeker.gateway.test.api.Greeter"
 }
 
 func (UnimplementedGreeterServer) mustEmbedUnimplementedGreeterServer() {}
@@ -217,7 +217,7 @@ func (x *greeterSayHelloStreamServer) Recv() (*HelloRequest, error) {
 // It's only intended for direct use with grpc_go.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Greeter_ServiceDesc = grpc_go.ServiceDesc{
-	ServiceName: "api.Greeter",
+	ServiceName: "top.kwseeker.gateway.test.api.Greeter",
 	HandlerType: (*GreeterServer)(nil),
 	Methods: []grpc_go.MethodDesc{
 		{
@@ -233,5 +233,5 @@ var Greeter_ServiceDesc = grpc_go.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "samples_api.proto",
+	Metadata: "test_api.proto",
 }
