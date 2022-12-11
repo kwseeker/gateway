@@ -5,7 +5,7 @@ go 1.17
 require (
 	dubbo.apache.org/dubbo-go/v3 v3.0.2
 	github.com/dubbogo/grpc-go v1.42.10
-	github.com/dubbogo/triple v1.0.8
+	github.com/dubbogo/triple v1.1.8
 	google.golang.org/protobuf v1.28.1
 )
 
